@@ -16,7 +16,7 @@ source ~/.bashrc
 sudo rm -f ./nvim-linux-x86_64.tar.gz
 
 # Install Neovim config based off NvChad
-sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade -y
 sudo apt install xclip -y
 
 rm -rf ~/.config/nvim
@@ -25,5 +25,9 @@ rm -rf ~/.local/share/nvim
 mkdir ~/.config/nvim -p
 mv ./{*,.*} ~/.config/nvim/
 
-nvim --headless +"MasonInstall" +qall # joe is the most awesome
+nvim --headless +"MasonInstall" +qall 
 
+cd ..
+rm -d ./CVim
+
+clear

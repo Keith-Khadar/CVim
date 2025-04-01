@@ -28,6 +28,8 @@ mv ./{*,.*} ~/.config/nvim/
 nvim --headless +"MasonInstall" +qall 
 
 cd ..
-rm -d ./CVim
+rm -d ./KVim
 
 clear
+
+exec bash

@@ -4,6 +4,10 @@ cd "$(dirname "$0")" || { echo "Failed to change directory. Exiting."; exit 1; }
 echo "Now in the script's directory: $(pwd)"
 
 # Install nvim
+sudo apt update && sudo apt upgrade -y
+sudo apt install curl
+sudo apt install build-essential
+
 # Just to be safe also make sure neovim isnt installed by apt
 sudo apt remove nvim -y
 sudo apt-get remove neovim -y
@@ -19,7 +23,7 @@ source ~/.bashrc
 sudo rm -f ./nvim-linux-x86_64.tar.gz
 
 # Install necessary dependencies
-sudo apt update && sudo apt upgrade -y
+
 sudo apt install xclip -y
 sudo apt install ripgrep
 sudo apt install shellcheck
